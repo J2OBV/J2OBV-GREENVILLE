@@ -14636,8 +14636,11 @@ end)
 local Script = Window:NewTab("Credits")
 local ScriptSection = Script:NewSection("Credits")
 
-ScriptSection:NewButton("CLICK ME!", "UI made by J2OBV", function()
-    chat ("J2OBV ON YT!!!")
+ScriptSection:NewButton("Leave!", "UI made by J2OBV", function()
+    for _,v in pairs(game.Players:GetPlayers()) do
+        if v:IsA("Player") then
+        v:Kick("Bye")
+        end end
 end)
 
 ScriptSection:NewButton("Aimhook (Best Arsenal Script!)", "Only Works in the game Arsenal", function()
